@@ -43,6 +43,12 @@
  .hero .sub{font-size:12px}
  .hero .tags{top:10px;bottom:auto;right:10px}
  .hero .tags span{display:none}
+ .hero .cta{gap:6px}
+ .btn{padding:8px 12px;font-size:12.5px}
+ .btn .lg{display:none}
+ .jump .w{gap:6px;padding-top:8px;padding-bottom:8px}
+ .jump a{font-size:13px;padding:9px 6px;gap:5px}
+ .jump span{display:none}
  .hero .tags em{font-size:9px;text-shadow:0 1px 4px rgba(0,0,0,.7)}
 }
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;padding:24px 0 40px}
@@ -58,6 +64,17 @@
 .shead span{font:italic 800 13px/1 "Playfair Display",Georgia,serif;letter-spacing:.12em;color:#0b1430;background:var(--gold);border-radius:4px;padding:5px 8px 4px}
 .shead small{font-size:12px;font-weight:400;color:var(--mut)}
 .shead + .grid{padding-top:12px}
+.shead{scroll-margin-top:64px}
+.shead .more{margin-left:auto;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.jump{position:sticky;top:0;z-index:10;background:rgba(238,242,248,.94);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.jump .w{display:flex;gap:8px;padding-top:10px;padding-bottom:10px}
+.jump a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:9px 10px;border-radius:10px;background:#fff;border:1px solid var(--line);
+ color:var(--navy);font-size:14px;font-weight:700;text-decoration:none;box-shadow:0 2px 8px -6px rgba(15,43,91,.45)}
+.jump a:hover{border-color:var(--blue)}
+.jump span{font:italic 800 11px/1 "Playfair Display",Georgia,serif;letter-spacing:.1em;background:var(--gold);color:#0b1430;border-radius:3px;padding:4px 6px 3px}
+.jump b{font:800 12px/1 Inter,sans-serif;color:var(--mut)}
+.jump b::after{content:"号";font:700 11px "Noto Sans JP",sans-serif;margin-left:1px}
+.btn.wk{background:#fff;color:#0b1430}
 footer{padding:0 0 36px;color:var(--mut);font-size:12px;line-height:1.8}
 footer a{color:var(--blue);font-weight:700}
 </style></head><body>
@@ -67,12 +84,13 @@ footer a{color:var(--blue);font-weight:700}
 <div class="k">MARKET DAILY REPORT</div>
 <h1>Back <em>Number</em></h1>
 <p class="sub">バックナンバー<i>|</i>毎朝のレポート <b>3</b> 号<i>|</i>週次レポート <b>1</b> 号</p>
-<div class="cta"><a class="btn gold" href="index.html">最新の号を読む ›</a><a class="btn ghost" href="https://kenx970-glitch.github.io/haru-capital/">作戦室を見る</a></div>
+<div class="cta"><a class="btn gold" href="index.html">最新の号を読む ›</a><a class="btn wk" href="weekly/index.html">週次レポート<span class="lg">を読む</span> ›</a><a class="btn ghost" href="https://kenx970-glitch.github.io/haru-capital/">作戦室を見る</a></div>
 <div class="say"><img src="../media/yuki_face.gif" alt="広報 ユキ"><p><small>広報 ユキ</small>気になる日を押すと、その日のレポートが読めます！</p></div>
 </div></div>
 <div class="tags"><span>広報 ユキ</span><span>ファンドマネージャー ハル</span></div>
 </header>
-<main class="w"><h2 class="shead"><span>DAILY</span>毎朝のレポート<small>毎朝6時すぎに公開</small></h2><div class="grid"><a class="card" href="2026-10-09.html"><img src="og_2026-10-09.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.09（金）　第3号<span class="new">最新</span></p><p class="h">半導体安・金利高に警戒</p></div></a><a class="card" href="2026-10-08.html"><img src="og_2026-10-08.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.08（木）　第2号</p><p class="h">米金利高が日本株を圧迫</p></div></a><a class="card" href="2026-10-07.html"><img src="og_2026-10-07.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.07（水）　第1号</p><p class="h">AI・半導体株が日経を押し上げ</p></div></a></div><h2 class="shead"><span>WEEKLY</span>週次レポート<small>毎週金曜の夜に、1週間の振り返りと来週の見通し</small></h2><div class="grid"><a class="card" href="weekly/2026-10-09.html"><img src="og_weekly_2026-10-09.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.09（金）　第1号<span class="new">最新</span></p><p class="h">日経平均4週続伸、69,031円で着地</p></div></a></div></main>
+<nav class="jump"><div class="w"><a href="#daily"><span>DAILY</span>毎朝のレポート<b>3</b></a><a href="#weekly"><span>WEEKLY</span>週次レポート<b>1</b></a></div></nav>
+<main class="w"><h2 class="shead" id="daily"><span>DAILY</span>毎朝のレポート<small>毎朝6時すぎに公開</small></h2><div class="grid"><a class="card" href="2026-10-09.html"><img src="og_2026-10-09.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.09（金）　第3号<span class="new">最新</span></p><p class="h">半導体安・金利高に警戒</p></div></a><a class="card" href="2026-10-08.html"><img src="og_2026-10-08.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.08（木）　第2号</p><p class="h">米金利高が日本株を圧迫</p></div></a><a class="card" href="2026-10-07.html"><img src="og_2026-10-07.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.07（水）　第1号</p><p class="h">AI・半導体株が日経を押し上げ</p></div></a></div><h2 class="shead" id="weekly"><span>WEEKLY</span>週次レポート<small>毎週金曜の夜に、1週間の振り返りと来週の見通し</small><a class="more" href="weekly/index.html">最新の週次レポートを読む ›</a></h2><div class="grid"><a class="card" href="weekly/2026-10-09.html"><img src="og_weekly_2026-10-09.png" alt="" loading="lazy"><div class="meta"><p class="d">2026.10.09（金）　第1号<span class="new">最新</span></p><p class="h">日経平均4週続伸、69,031円で着地</p></div></a></div></main>
 <footer><div class="w">このレポートは生成AIが自動で作成しています。数字は公表データをそのまま使っていますが、文章には誤りが含まれる可能性があります。
 ハル・キャピタルは、AIの社員が本物の株価で運用を記録しているシミュレーションで、実際の売買はしていません。投資の判断はご自身でお願いします。<br>
 公開の時刻は目安です。システムの都合などで、時間が前後したり、お休みしたりすることがあります。<br>
