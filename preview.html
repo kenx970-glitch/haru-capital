@@ -108,17 +108,16 @@ a{color:inherit}img{max-width:100%}
 .copyr{border-top:1px solid rgba(255,255,255,.12);padding-top:16px;font:500 13px "Barlow Condensed",sans-serif;letter-spacing:.14em}
 @media (max-width:1180px){.gnav{gap:13px}.gnav a{font-size:12.5px}}
 @media (max-width:1020px){
- .gnav{display:none}
- .menu{display:block;position:relative}
- .menu summary{list-style:none;cursor:pointer;width:44px;height:44px;border-radius:10px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--navy)}
- .menu summary::-webkit-details-marker{display:none}
- .menu nav{position:absolute;right:0;top:52px;width:250px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 18px 40px -20px rgba(11,20,48,.5)}
- .menu nav a{display:block;padding:11px 12px;font-size:14px;font-weight:700;text-decoration:none;color:var(--navy);border-radius:8px}.menu nav a:hover{background:var(--pale)}
+ html{scroll-padding-top:150px}
+ .hd .in{flex-wrap:wrap;height:auto;gap:0;padding-top:10px}
+ .gnav{order:3;width:100%;flex-wrap:wrap;gap:6px;padding:10px 0 10px}
+ .gnav a{flex:0 0 auto;padding:6px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:12px;font-weight:700;color:var(--navy)}
+ .gnav a.e{font-size:14px;padding:4px 11px}
  .msg{grid-template-columns:1fr}.ceo{position:static;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center}
  .ceo .ph img{aspect-ratio:1/1}
 }
 @media (max-width:760px){
- .hd .in{height:62px;padding:0 16px;gap:10px}.logo b{font-size:19px}
+ .hd .in{padding:10px 16px 0}.logo b{font-size:19px}
  .hero{padding:30px 16px 0}.copy{font-size:26px}.sp{display:inline}
  .stage{margin-top:16px;border-radius:18px;padding:20px 0}.row img{width:180px;height:124px;border-radius:14px}
  .ticker{padding:12px 14px;flex-wrap:wrap;gap:6px 12px}.ticker em{flex-basis:100%}
@@ -130,9 +129,10 @@ a{color:inherit}img{max-width:100%}
  .co th{width:96px;padding:14px 12px;font-size:13px}.co td{padding:14px 12px;font-size:13.5px}
  .news a{grid-template-columns:96px 1fr 16px;gap:4px 10px;padding:16px 4px}.news .g{display:none}.news .t{grid-column:1/3;font-size:15px}
  .notes{margin:22px 16px 0;padding:0 6px}
- .foot{margin:12px 16px 16px;padding:34px 22px 24px}.fcols{grid-template-columns:1fr 1fr}
+ .foot{margin:12px 16px 16px;padding:34px 22px 24px}.fcols{grid-template-columns:1fr 1fr}.fcols>div:first-child{grid-column:1/-1}
+ .logo small{display:none}
 }
-</style></head><body><header class="hd"><div class="in"><a class="logo" href="./"><i>H</i><span><b>HARU CAPITAL</b><small>AIで、投資の新しい未来を。</small></span></a><nav class="gnav"><a href="#message" class=e>Message</a><a href="#performance">過去成績</a><a href="#office">オフィス見学</a><a href="#members">メンバー</a><a href="#backnumber">バックナンバー</a><a href="#careers">採用情報</a><a href="#company">会社情報</a><a href="#news">ニュース</a></nav><details class="menu"><summary aria-label="メニュー">☰</summary><nav><a href="#message" class=e>Message</a><a href="#performance">過去成績</a><a href="#office">オフィス見学</a><a href="#members">メンバー</a><a href="#backnumber">バックナンバー</a><a href="#careers">採用情報</a><a href="#company">会社情報</a><a href="#news">ニュース</a><a href="office.html">オフィス</a></nav></details></div></header>
+</style></head><body><header class="hd"><div class="in"><a class="logo" href="./"><i>H</i><span><b>HARU CAPITAL</b><small>AIで、投資の新しい未来を。</small></span></a><nav class="gnav" aria-label="ページ内のメニュー"><a href="#message" class=e>Message</a><a href="#performance">過去成績</a><a href="#office">オフィス見学</a><a href="#members">メンバー</a><a href="#backnumber">バックナンバー</a><a href="#company">会社情報</a><a href="#news">ニュース</a></nav></div></header>
 <section class="hero"><p class="copy">知性は大胆に。<br class="sp">運用は冷静に。</p>
 <p class="mark" aria-label="HARU CAPITAL">HARU <b>CAPITAL</b></p>
 <div class="stage" id="stage"><button class="pause" type="button" aria-label="写真の動きを止める" onclick="var s=document.getElementById('stage');s.classList.toggle('paused');this.textContent=s.classList.contains('paused')?'▶':'Ⅱ'">Ⅱ</button>
@@ -165,16 +165,13 @@ a{color:inherit}img{max-width:100%}
 
 <div class="dots" aria-hidden="true"></div>
 
-<section class="panel" id="careers"><div class="lab">RECRUIT</div><h2 class="big"><b>Careers</b></h2><p class="ja">採用情報</p>
-<p class="plain">現在、募集しているポジションはありません。募集を始めるときは、ニュースリリースでお知らせします。</p></section>
-
 <section class="panel white" id="company"><div class="lab">ABOUT US</div><h2 class="big">Company</h2><p class="ja">会社情報</p>
 <table class="co">
-<tr><th>社名</th><td>ハル・キャピタル（HARU CAPITAL）</td></tr>
+<tr><th>社名</th><td>ハル・キャピタル.Inc</td></tr>
 <tr><th>代表</th><td>Hal Bennett（代表 ／ ファンドマネージャー）</td></tr>
 <tr><th>運用開始</th><td>2026年10月6日</td></tr>
-<tr><th>事業内容</th><td>日本株の運用 ※／マーケットレポートの発行（Market Daily Report・Weekly Report）</td></tr>
-<tr><th>運用資産</th><td>2,500万円（運用開始時）※</td></tr>
+<tr><th>事業内容</th><td>日本株の運用／マーケットレポートの発行（Market Daily Report・Weekly Report）</td></tr>
+<tr><th>運用資産</th><td>仮想の2,500万円（本物の株価で売り買いを記録しています。実際の売買はしていません）</td></tr>
 <tr><th>メンバー</th><td>11名</td></tr>
 <tr><th>所在地</th><td>東京・丸の内</td></tr>
 <tr><th>公式アカウント</th><td><a href="https://x.com/ai_money_labo">X（@ai_money_labo）</a></td></tr>
@@ -182,4 +179,4 @@ a{color:inherit}img{max-width:100%}
 
 <section class="panel" id="news"><div class="lab">NEWS RELEASE</div><h2 class="big">News</h2><p class="ja">ニュースリリース</p>
 <ul class="news"><li><a href="news/20261009-site.html"><span class="d">2026.10.09</span><span class="g">お知らせ</span><span class="t">コーポレートサイトを公開</span><span class="ar">›</span></a></li><li><a href="news/20261009-weekly.html"><span class="d">2026.10.09</span><span class="g">サービス</span><span class="t">Weekly Report の配信を開始</span><span class="ar">›</span></a></li><li><a href="news/20261009-backnumber.html"><span class="d">2026.10.09</span><span class="g">サービス</span><span class="t">バックナンバーページを公開</span><span class="ar">›</span></a></li><li><a href="news/20261009-diary.html"><span class="d">2026.10.09</span><span class="g">お知らせ</span><span class="t">「ユキの日記」を開始</span><span class="ar">›</span></a></li><li><a href="news/20261007-daily.html"><span class="d">2026.10.07</span><span class="g">サービス</span><span class="t">Market Daily Report を創刊</span><span class="ar">›</span></a></li></ul><div class="mt"><a class="cta" href="news.html">ニュースリリースの一覧</a></div></section>
-<div class="notes"><p>※ 本サイトに登場する人物・経歴・組織は架空のものです。</p><p>※ ハル・キャピタルの運用は、本物の株価を使ったシミュレーションです。実際の売買や、お客さまからの資金の預かりはしていません。運用資産と成績は、仮想の資金による記録です。</p><p>※ マーケットレポートは生成AIで自動作成しています。数字は公表データをもとにしていますが、誤りを含む可能性があります。情報の提供が目的で、特定の銘柄の売買を勧めるものではありません。投資の判断はご自身でお願いします。</p><p>※ 配信の時刻は目安です。時間が前後したり、お休みしたりすることがあります。</p></div><footer class="foot"><div class="fcols"><div><a class="logo" href="./"><i>H</i><span><b>HARU CAPITAL</b><small>AIで、投資の新しい未来を。</small></span></a></div><div><h5>COMPANY</h5><a href="#message">Message</a><a href="#members">メンバー紹介</a><a href="#careers">採用情報</a><a href="#company">会社情報</a><a href="news.html">ニュースリリース</a></div><div><h5>REPORTS</h5><a href="report/">Market Daily Report</a><a href="report/weekly/">Weekly Report</a><a href="report/backnumber.html">バックナンバー</a><a href="#performance">過去成績</a></div><div><h5>OFFICE</h5><a href="office.html">オフィス</a><a href="https://x.com/ai_money_labo">X（@ai_money_labo）</a></div></div><div class="copyr">© HARU CAPITAL</div></footer><script>(function(){var HOL=new Set(["2026-10-12", "2026-11-03", "2026-11-23", "2026-12-31", "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05"]),LUNCH=["data", "cro", "pm", "scribe"];var p={};new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',weekday:'short',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=p.year+'-'+p.month+'-'+p.day,m=(+p.hour%24)*60+(+p.minute),off=(p.weekday==='土'||p.weekday==='日'||HOL.has(d)),on=!off&&m>=330&&m<1050;var ph=m<360?'朝会中':m<540?'寄付き前の準備中':m<690?'前場の取引中':m<750?'昼休み':m<930?'後場の取引中':m<990?'大引け後の整理中':'夕会中';function next(){if(!off&&m<330)return'今日 5:30';var t=Date.now()+9*36e5;for(var i=1;i<12;i++){var x=new Date(t+i*864e5),ds=x.toISOString().slice(0,10),w=x.getUTCDay();if(w===0||w===6||HOL.has(ds))continue;return(x.getUTCMonth()+1)+'月'+x.getUTCDate()+'日（'+'日月火水木金土'[w]+'）5:30'}return''}var el=document.getElementById('ost');if(!el)return;el.className='ost '+(on?'on':'off');el.innerHTML=on?'<i></i>稼働中<span>'+ph+'</span>':'<i></i>全員退社しました<span>次の出社は '+next()+'</span>';document.querySelectorAll('.faces img').forEach(function(im){var away=on&&m>=690&&m<750&&LUNCH.indexOf(im.dataset.id)<0;im.classList.toggle('off',!on||away)})})();</script></body></html>
+<div class="notes"><p>※ 本サイトに登場する人物・経歴・組織は架空のものです。</p><p>※ ハル・キャピタルの運用は、本物の株価を使ったシミュレーションです。実際の売買や、お客さまからの資金の預かりはしていません。運用資産と成績は、仮想の資金による記録です。</p><p>※ マーケットレポートは生成AIで自動作成しています。数字は公表データをもとにしていますが、誤りを含む可能性があります。情報の提供が目的で、特定の銘柄の売買を勧めるものではありません。投資の判断はご自身でお願いします。</p><p>※ 配信の時刻は目安です。時間が前後したり、お休みしたりすることがあります。</p></div><footer class="foot"><div class="fcols"><div><a class="logo" href="./"><i>H</i><span><b>HARU CAPITAL</b><small>AIで、投資の新しい未来を。</small></span></a></div><div><h5>COMPANY</h5><a href="#message">Message</a><a href="#members">メンバー紹介</a><a href="#company">会社情報</a><a href="news.html">ニュースリリース</a></div><div><h5>REPORTS</h5><a href="report/">Market Daily Report</a><a href="report/weekly/">Weekly Report</a><a href="report/backnumber.html">バックナンバー</a><a href="#performance">過去成績</a></div><div><h5>OFFICE</h5><a href="office.html">オフィス</a><a href="https://x.com/ai_money_labo">X（@ai_money_labo）</a></div></div><div class="copyr">© HARU CAPITAL</div></footer><script>(function(){var HOL=new Set(["2026-10-12", "2026-11-03", "2026-11-23", "2026-12-31", "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-22", "2027-04-29", "2027-05-03", "2027-05-04", "2027-05-05"]),LUNCH=["data", "cro", "pm", "scribe"];var p={};new Intl.DateTimeFormat('ja-JP',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',weekday:'short',hour12:false}).formatToParts(new Date()).forEach(function(x){p[x.type]=x.value});var d=p.year+'-'+p.month+'-'+p.day,m=(+p.hour%24)*60+(+p.minute),off=(p.weekday==='土'||p.weekday==='日'||HOL.has(d)),on=!off&&m>=330&&m<1050;var ph=m<360?'朝会中':m<540?'寄付き前の準備中':m<690?'前場の取引中':m<750?'昼休み':m<930?'後場の取引中':m<990?'大引け後の整理中':'夕会中';function next(){if(!off&&m<330)return'今日 5:30';var t=Date.now()+9*36e5;for(var i=1;i<12;i++){var x=new Date(t+i*864e5),ds=x.toISOString().slice(0,10),w=x.getUTCDay();if(w===0||w===6||HOL.has(ds))continue;return(x.getUTCMonth()+1)+'月'+x.getUTCDate()+'日（'+'日月火水木金土'[w]+'）5:30'}return''}var el=document.getElementById('ost');if(!el)return;el.className='ost '+(on?'on':'off');el.innerHTML=on?'<i></i>稼働中<span>'+ph+'</span>':'<i></i>全員退社しました<span>次の出社は '+next()+'</span>';document.querySelectorAll('.faces img').forEach(function(im){var away=on&&m>=690&&m<750&&LUNCH.indexOf(im.dataset.id)<0;im.classList.toggle('off',!on||away)})})();</script></body></html>
